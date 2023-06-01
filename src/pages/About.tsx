@@ -7,7 +7,7 @@ export default function About() {
 
   const datas = [{
     "header":"Programming-languages",
-    "content":"Javascript(Typescript) Python Java(beginner) "
+    "content":"Javascript (Typescript) Python Java(beginner) "
 
   },
   {
