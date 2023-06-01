@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {  Box, Stack } from '@mui/material'
+import React from 'react'
+import { Outlet, RouterProvider } from 'react-router-dom'
+import { router } from './routes/router'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Stack justifyContent="space-between" sx={{padding:{xs:"0 10px",md:"0 248px"},backgroundColor:"#282C33",minHeight:"100vh",color:"white"}}>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+        <Footer></Footer>
+    </Stack>
+  )
 
-export default App;
+}
