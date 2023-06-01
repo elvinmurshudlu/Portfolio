@@ -13,3 +13,10 @@ interface IButton{
     status:boolean,
     disabled:boolean
 }
+
+export interface IExperience{
+    time:string
+    header:string
+    content:string
+    chip?:string[]
+}
