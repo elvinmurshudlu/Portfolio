@@ -1,20 +1,55 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import profile from "../assets/images/Profile.png"
 import status from "../assets/images/Status.svg"
+import Typewriter from 'typewriter-effect';
+import { useState } from 'react';
 
 export default function Introduce() {
+
+    const [active,setActive] = useState(false)
+    const [cursor,setCursor] = useState("")
+
   return (
     <Grid container component="section">
             <Grid item xs={12} md={6} sx={{display:"flex",flexDirection:"column",fontSize:"32px",justifyContent:"center"}}>
 
                 <Box component="div">
-                    I'm Elvin Murshudlu
+                    
+                    <Typewriter
+
+                            options={{
+                                cursor:cursor
+                            }}
+
+                            onInit={(typewriter) => {
+                                typewriter.typeString("I'm Elvin Murshudlu")                                
+                                .start()
+                                .callFunction(()=>{
+                                    setActive(true)
+                                })
+                                
+                            }}
+                            />
                 </Box>
 
                     
                 <Box sx={{marginBottom:"15px"}} component="div" color="#C778DD
 ">
-                   Front-end Developer
+                   
+                   {
+                    active && <Typewriter
+                   
+                    
+                    onInit={(typewriter) => {
+                        typewriter.typeString("Front-end Developer")
+                        .start()
+                        .callFunction(()=>{
+                                    setCursor("")
+
+                        })
+                    }}
+                    />
+                   }
                 </Box>
                 
 
