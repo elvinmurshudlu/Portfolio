@@ -19,8 +19,8 @@ export default function ProjectItem({content}:{content:IProject}) {
                 <Typography gutterBottom  variant='subtitle2' color="#ABB2BF">{content.content}</Typography>
 
                 <Box sx={{display:"flex",gap:"10px",marginBottom:"5px",flexWrap:"wrap"}}>
-                    {content.buttons.map((button)=>(
-                        <Button component={Link} disabled={button.disabled}  to={button.link} target='_blank' sx={{border:`1px solid ${button.status ? "#C778DD" : "grey"} `,color:"white",padding:"6px 16px"}} variant='text'>{button.name}</Button>
+                    {content.buttons.map((button,index)=>(
+                        <Button key={index} component={Link} disabled={button.disabled}  to={button.link} target='_blank' sx={{border:`1px solid ${button.status ? "#C778DD" : "grey"} `,color:"white",padding:"6px 16px"}} variant='text'>{button.name}</Button>
                     ))}
                 </Box>
                 
