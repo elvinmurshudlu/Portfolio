@@ -3,9 +3,14 @@ import React from 'react'
 import { IProject } from '../Interface/Project'
 import {Link} from "react-router-dom"
 
+
 export default function ProjectItem({content}:{content:IProject}) {
+
+    // useEffect(()=>{
+    //     AOS.init()
+    // },[])
   return (
-        <Box component="div" sx={{cursor:"pointer"}} >
+        <Box data-aos="fade-right" component="div" sx={{cursor:"pointer"}} >
             {content.image  && <Box sx={{border:"1px solid #ABB2BF"}}><img style={{width:"100%"}} src={content?.image}></img></Box>}
 
             <Box sx={{border:"1px solid #ABB2BF",padding:"6px 10px",color:"#C778DD"}}  >{content.header}

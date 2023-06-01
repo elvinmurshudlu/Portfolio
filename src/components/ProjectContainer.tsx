@@ -96,7 +96,7 @@ export default function ProjectContainer({header,projects}:{header:string,projec
         <Grid container spacing={2}>
             {
                 projects.map((project,index)=>(
-                    <Grid key={index} item xs={12} sm={6} md={4}>
+                    <Grid  key={index} item xs={12} sm={6} md={4}>
                              <ProjectItem content={project}></ProjectItem>
                     </Grid>
                 ))

@@ -1,6 +1,7 @@
 import React from 'react'
 import PageHeader from '../components/PageHeader'
 import { Box, Grid } from '@mui/material'
+import SkillItem from '../components/SkillItem'
 
 export default function Skills() {
     const datas = [{
@@ -39,13 +40,7 @@ export default function Skills() {
     <PageHeader header='skills' symbol='#'></PageHeader>
         <Grid sx={{marginBottom:"30px"}} container spacing={2}>
           {datas.map((data)=>(
-            <Grid item xs={6} sm={4} md={3}>
-            <Box sx={{cursor:"pointer"}}>
-              <Box sx={{border:"1px solid white",padding:"16px"}}>{data.header}</Box>
-              <Box  sx={{border:"1px solid white",padding:"16px",color:"#ABB2BF"}}>{data.content}</Box>
-
-            </Box>
-          </Grid>
+            <SkillItem data={data}></SkillItem>
           ))}
         </Grid>
     </Box>

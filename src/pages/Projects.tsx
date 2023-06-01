@@ -18,6 +18,8 @@ export default function Projects() {
 
       <ProjectContainer projects={apps} header='apps'></ProjectContainer>
       <ProjectContainer projects={simpleProjects} header='simple-projects'></ProjectContainer>
+      
+
     </Box>
   )
 }

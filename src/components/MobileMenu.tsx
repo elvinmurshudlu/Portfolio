@@ -30,7 +30,7 @@ export default function MobileMenu() {
   return (
         <>
         <IconButton sx={{display:{sx:"flex",md:"none"}}} onClick={()=>setIsOpen(!isOpen)} ><MenuIcon sx={{color:"white"}}></MenuIcon></IconButton>
-        <Box sx={{width:"100%",height:isOpen ? "100vh":"0",position:"absolute",backgroundColor:"#282C33",top:"100%",left:"0",zIndex:"2",transition:"0.3s",overflow:"hidden",display:"flex",flexDirection:"column"}}>
+        <Box sx={{width:"100%",height:isOpen ? "100vh":"0",position:"absolute",backgroundColor:"#282C33",top:"100%",left:"0",zIndex:"2",transition:"0.3s",overflow:"hidden",display:"flex",flexDirection:"column",rowGap:"60px"}}>
             <Box sx={{padding:"30px 0"}}>
               <NavbarUl isMobile={true}></NavbarUl>
 

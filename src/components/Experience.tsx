@@ -8,7 +8,7 @@ import { IExperience } from '../Interface/Project'
 
 export default function Experience({content}:{content:IExperience}) {
   return (
-        <Grid container spacing={2} >
+        <Grid data-aos="fade-up" container spacing={2} >
             <Grid item xs={4} sx={{display:"flex",alignItems:"center"}}>
                 <Typography color="#ABB2BF">{content.time}</Typography>
             </Grid>

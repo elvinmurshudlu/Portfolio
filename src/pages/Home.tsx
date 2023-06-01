@@ -6,8 +6,7 @@ import Introduce from '../components/Introduce'
 export default function Home() {
   return (
     <Box component="main">
-        <Introduce></Introduce>
-
+        <Introduce ></Introduce>
     </Box>
   )
 }
